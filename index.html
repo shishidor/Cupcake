@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<meta name="description" content="How many cupcakes make you happy?">
+		<meta name="keywords" content="cupcake, happiness, quiz">
+		<meta name="author" content="Shirin Doroudian">
+		<title>Cupcake Quiz</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+</head>
+<body>
+	<div id="container">
+  		<div id="cupcake_column">
+  			<img Id="cupcake_pic" src="./images/cupcake.svg" alt="Cupcake">
+  			<h1>How many<br>cupcakes<br>make you<br>happy?</h1>
+  		</div>
+
+  		<div id="quiz_column">
+  			<div id="container_form">
+  			<form id="quiz_form" action="process.php" method="POST">
+  				<div class="row_form">
+					<label class="title_form">Age</label>
+					<input  type="number" name="age" value="16" min="12" max="85">
+				</div>
+
+	  			<div class="row_form">
+	  				<label class="title_form">Height</label>
+		  			<output class="height_output" id="output">165</output>
+
+					<input type="range" class="range" id="range" name="height" min="120" max="220">
+					<script type="text/javascript">
+					var rangeinput= document.getElementById("range");
+					var output= document.getElementById("output");
+					rangeinput.addEventListener("change", function(event){
+						output.textContent=event.target.value;
+					});
+					</script>
+				</div>
+
+				<div class="row_form">
+				<label class="title_form">Hairlength</label>
+    			<div class="hair-selector">
+	        		<input id="hair1" type="radio" name="hairlength" value="short" />
+	        		<label class="hair-lenght hair1" for="hair1"></label>
+
+	       			<input id="hair2" type="radio" name="hairlength" value="medium" />
+	        		<label class="hair-lenght hair2" for="hair2"></label>
+
+	        		<input id="hair3" type="radio" name="hairlength" value="long" />
+	        		<label class="hair-lenght hair3" for="hair3"></label>
+    			</div>
+       			</div>
+
+				<div class="row_form eyecolor_form">
+					<label class="title_form">Eyecolor</label>
+					<div class="radio_form">
+					<input type="radio" id="color1" name="selector" checked>
+					<label class="eyecolor_label" for="color1">Blue</label>
+					  
+					<input type="radio" id="color2" name="selector">
+					<label class="eyecolor_label" for="color2">Green</label>
+					  
+					<input type="radio" id="color3" name="selector">
+					<label class="eyecolor_label" for="color3">Brown</label>
+					  
+					<input type="radio" id="color4" name="selector">
+					<label class="eyecolor_label" for="color4">Grey</label>
+					</div>
+				</div>
+
+				<div class="row_form">
+		    		<lable class="title_form">Figure</lable>
+		    		<select class="select-form" name="figure">
+		    			<option id="figure1" value="thin">Thin</option>
+		    			<option id="figure2" value="sporty">Sporty</option>
+		    			<option id="figure3" value="normal">Normal</option>
+		    			<option id="figure4" value="chubby">Chubby</option>
+		    			<option id="figure5" value="fat">Fat</option>
+					</select>
+    			</div>
+
+    			<div>
+    				<button id="button_calculate" type="submit">Calculate</button>
+    			</div>
+				
+			</form>
+			</div>
+			
+			<div id="flag">
+  				<a href="#"><img src="./images/english.svg" alt="English"></a>
+  				<a href="#"><img src="./images/german.svg" alt="German"></a>
+  				<a href="#"><img src="./images/spanish.svg" alt="Spanish"></a>
+  			</div>
+  			
+  		</div>
+  		<div class="clr"></div>
+	</div>
+	
+</body>
+</html>
+

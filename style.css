@@ -1,0 +1,317 @@
+html{
+	height:100vh;
+}
+
+*{
+	margin: 0;
+	padding: 0;	
+}
+
+.clr{
+	clear: both;
+}
+
+#container{
+	min-height:100vh;
+	margin: 0;
+}
+
+#cupcake_column {
+    float: left;
+    min-height:100vh;
+    width: 40%;
+    background-color: #d3edbd;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+#cupcake_pic{
+	width: 200px;
+	margin-top: 50px;
+}
+
+#cupcake_column h1{
+	font-family: 'Baloo', sans-serif;
+	font-size: 50px;
+	margin-bottom: 10px;
+}
+
+#cupcake_column h1 br{ 
+    display: block;
+    content: "";
+    margin: -10px;
+}
+
+#quiz_column{
+	float: left;
+	width: 60%;
+	min-height:100vh;
+	background-color: #fff;
+	text-align: center;
+	position: relative;
+	padding-bottom: 30px;
+}
+
+ #container_form{
+ 	width:80%;
+	margin:auto;
+ }
+
+#quiz_form{
+	margin-top: 20px;
+	text-align: center;
+	font-family: 'Baloo', sans-serif;
+	font-size: 20px;
+}
+
+.row_form{
+ 	padding: 20px 0;
+ 	border-bottom:1px solid #EEEEEE;
+ 	display: flex;
+    justify-content: space-between;
+    align-content: center;
+ }
+
+.title_form {
+ 	display: block;		
+ 	float: left;
+ }
+
+/*Age*/
+input[type=number]{
+	font-family:'Baloo', sans-serif;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 5px;	
+	width: 30%;
+}
+
+/*Height output*/
+.height_output{
+	font-size: 18px;
+	border: 1px solid #BDBDBD;
+	padding: 2px;
+	border-radius: 5px;
+	border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+	width: 10%;
+	cursor: default;
+}
+
+/*Height range*/
+input[type=range] {
+  height: 32px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 60%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 16px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #50555C;
+  background: #D3EDBD;
+  border-radius: 50px;
+  border: 0px solid #D3EDBD;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #E6E6E6;
+  border: 0px solid #FFCFE7;
+  height: 26px;
+  width: 50px;
+  border-radius: 50px;
+  background: #FFCFE7;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #D3EDBD;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 16px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #50555C;
+  background: #D3EDBD;
+  border-radius: 50px;
+  border: 0px solid #D3EDBD;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #E6E6E6;
+  border: 0px solid #FFCFE7;
+  height: 26px;
+  width: 50px;
+  border-radius: 50px;
+  background: #FFCFE7;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 16px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #D3EDBD;
+  border: 0px solid #D3EDBD;
+  border-radius: 100px;
+  box-shadow: 0px 0px 0px #50555C;
+}
+input[type=range]::-ms-fill-upper {
+  background: #D3EDBD;
+  border: 0px solid #D3EDBD;
+  border-radius: 100px;
+  box-shadow: 0px 0px 0px #50555C;
+}
+input[type=range]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 0px 0px 0px #E6E6E6;
+  border: 0px solid #FFCFE7;
+  height: 26px;
+  width: 50px;
+  border-radius: 50px;
+  background: #FFCFE7;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #D3EDBD;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #D3EDBD;
+}
+
+/*Hairlength*/
+.hair-selector input{
+    margin:0;padding:0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+}
+.hair1{background-image:url('images/hair1.svg');}
+.hair2{background-image:url('images/hair2.svg');}
+.hair3{background-image:url('images/hair3.svg');}
+
+.hair-selector input:active +.hair-lenght{opacity: .9;}
+.hair-selector input:checked +.hair-lenght{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+}
+.hair-lenght{
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:100px;height:70px;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+       -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+            filter: brightness(1.8) grayscale(1) opacity(.7);
+}
+.hair-lenght:hover{
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+            filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+a:visited{color:#888}
+a{color:#444;text-decoration:none;}
+p{margin-bottom:.3em;}
+
+/*Eyecolor*/
+.radio_form input[type=radio] {
+ visibility: hidden;
+ display: none;
+}
+.eyecolor_label {
+  color: #000000;
+  display: inline-block;
+  cursor: pointer;
+  padding: 5px 20px;
+}
+.radio_form input[type=radio]:checked + label{
+  color: #000000;
+  background: #d3edbd;
+}
+.eyecolor_label + .radio_form input[type=radio] + .eyecolor_label {
+  border-left: solid 3px #d3edbd;
+}
+.radio_form {
+  border: solid 3px #d3edbd;
+  display: inline-block;
+  margin: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/*Figure*/
+.select-form{
+	font-family: 'Baloo', sans-serif;
+	font-size: 18px;
+	width: 30%;
+	text-align: center;
+	border-radius: 5px;
+	border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+    cursor: pointer;
+}
+
+/*Calculate button*/
+ #button_calculate{
+ 	margin: 40px;
+ 	display: block;
+ 	color: #000000;
+ 	font-family: 'Baloo', sans-serif;
+ 	font-size: 18px;
+ 	background-color: #D3EDBD;
+ 	padding: 10px 50px;
+ 	border: 1px solid #D3EDBD;
+ 	border-radius: 5px;
+ 	margin: 20px auto;
+ 	cursor: pointer;
+ }
+
+/*Languages*/
+#flag{
+	position: absolute;
+ 	bottom: 10px;
+ 	right: 20px;
+}
+#flag a img{
+ 	width: 25px;
+ 	padding-left: 5px;
+ }
+
+/*Media Queries*/
+@media (max-width: 600px) { #cupcake_column, #quiz_column, #container  {
+    	float: none;
+    	width: 100%; 
+    	text-align: center;
+    }
+
+     .eyecolor_form label{
+     	display: block;
+    }
+}
+
+@media (max-width: 1024px){.eyecolor_form label{
+     	display: block;
+	}
+}
+
+
+
